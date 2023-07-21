@@ -28,42 +28,42 @@ FreqMin=#FreqMin#
 FreqMax=#FreqMax#
 Sensitivity=#Sensitivity#
 
-[MeasureBass]
+[MeasureBand0]
 Measure=Plugin
 Plugin=AudioLevel
 Parent=MeasureAudio
 Type=Band
 Bandidx=1
 
-[MeasureAudioRMSskull]
+[MeasureBand1]
 Measure=Plugin
 Plugin=AudioLevel
 Parent=MeasureAudio
 Type=Band
 Bandidx=2
 
-[MeasureAudioRMS]
+[MeasureBand2]
 Measure=Plugin
 Plugin=AudioLevel
 Parent=MeasureAudio
 Type=Band
 Bandidx=3
 
-[MeasureAudioRMS1]
+[MeasureBand3]
 Measure=Plugin
 Plugin=AudioLevel
 Parent=MeasureAudio
 Type=Band
 Bandidx=4
 
-[MeasureAudioRMS2]
+[MeasureBand4]
 Measure=Plugin
 Plugin=AudioLevel
 Parent=MeasureAudio
 Type=Band
 Bandidx=5
 
-[MeasureAudioRMS3]
+[MeasureBand5]
 Measure=Plugin
 Plugin=AudioLevel
 Parent=MeasureAudio
