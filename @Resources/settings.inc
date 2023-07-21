@@ -1,45 +1,69 @@
 [Variables]
-;Skycoder scale 
-SCALE=1
+; ╔═╗  ╔═╗  ╔╦╗  ╔╦╗  ╦  ╔╗╔  ╔═╗  ╔═╗
+; ╚═╗  ║╣    ║    ║   ║  ║║║  ║ ╦  ╚═╗
+; ╚═╝  ╚═╝   ╩    ╩   ╩  ╝╚╝  ╚═╝  ╚═╝
 
-;Sombra overlay scale
 OverlayScale=1.4
 
-;Default RGB color
+Scale=1.2
+MaxBounce=0.5
+BounceTreshold=0.2
+
+Jitter=1
+MaxJitter=35
+
+RingJitter=1
+MaxRingJitter=35
+
+; ╔═╗  ╔═╗  ╦    ╔═╗  ╦═╗  ╔═╗
+; ║    ║ ║  ║    ║ ║  ╠╦╝  ╚═╗
+; ╚═╝  ╚═╝  ╩═╝  ╚═╝  ╩╚═  ╚═╝
+
+; Default RGB color
 DefaultRED=255
 DefaultGREEN=255
 DefaultBLUE=255
 DefaultALPHA=255
 
-;RGB color to transform into
+; RGB color to transform into
 RED=255
 GREEN=0
 BLUE=255
 ALPHA=0
 
-;Ring options
-;Intensity is how much the ring reacts to sound
-;Sustain is the default speed
-;Direction is 1 for clockwise, -1 for counterclockwise
+; ╦═╗  ╔═╗  ╔╦╗  ╔═╗  ╔╦╗  ╦  ╔═╗  ╔╗╔
+; ╠╦╝  ║ ║   ║   ╠═╣   ║   ║  ║ ║  ║║║
+; ╩╚═  ╚═╝   ╩   ╩ ╩   ╩   ╩  ╚═╝  ╝╚╝
 
-;Inner ring options
+; Intensity is how much sound affects the rotation
+; Sustain is the base speed of the rotation
+
+; Inner ring
 RotateIntensity=6
 RotateSustain=1200
 RotationDirection=1
 
-;Middle ring options
+; Middle ring
 RotateIntensity1=10
 RotateSustain1=1600
 RotationDirection1=-1
 
-;Outer ring options
+; Outer ring
 RotateIntensity2=8
 RotateSustain2=1400
 RotationDirection2=1
 
-;Individual colors. DO NOT TOUCH!
-CenterColor=		(#DefaultRED# - (#DefaultRED# - #RED#) * [MeasureAudioRMSskull]),	(#DefaultGREEN# - (#DefaultGREEN# - #GREEN#) * [MeasureAudioRMSskull]),	(#DefaultBLUE# - (#DefaultBLUE# - #BLUE#) * [MeasureAudioRMSskull]),(#DefaultALPHA# - (#DefaultALPHA# - #ALPHA#) * [MeasureAudioRMSskull])
-InnerColor=			(#DefaultRED# - (#DefaultRED# - #RED#) * [MeasureAudioRMS]),	 	(#DefaultGREEN# - (#DefaultGREEN# - #GREEN#) * [MeasureAudioRMS]),	 	(#DefaultBLUE# - (#DefaultBLUE# - #BLUE#) * [MeasureAudioRMS])     ,(#DefaultALPHA# - (#DefaultALPHA# - #ALPHA#) * [MeasureAudioRMS])	 
-MiddleSolidColor=	(#DefaultRED# - (#DefaultRED# - #RED#) * [MeasureAudioRMS1]),	 	(#DefaultGREEN# - (#DefaultGREEN# - #GREEN#) * [MeasureAudioRMS1]),	 	(#DefaultBLUE# - (#DefaultBLUE# - #BLUE#) * [MeasureAudioRMS1])	   ,(#DefaultALPHA# - (#DefaultALPHA# - #ALPHA#) * [MeasureAudioRMS1])	 
-MiddleColor=		(#DefaultRED# - (#DefaultRED# - #RED#) * [MeasureAudioRMS2]),	 	(#DefaultGREEN# - (#DefaultGREEN# - #GREEN#) * [MeasureAudioRMS2]),	 	(#DefaultBLUE# - (#DefaultBLUE# - #BLUE#) * [MeasureAudioRMS2])	   ,(#DefaultALPHA# - (#DefaultALPHA# - #ALPHA#) * [MeasureAudioRMS2])	 
-OuterColor=			(#DefaultRED# - (#DefaultRED# - #RED#) * [MeasureAudioRMS3]),	 	(#DefaultGREEN# - (#DefaultGREEN# - #GREEN#) * [MeasureAudioRMS3]),	 	(#DefaultBLUE# - (#DefaultBLUE# - #BLUE#) * [MeasureAudioRMS3])	   ,(#DefaultALPHA# - (#DefaultALPHA# - #ALPHA#) * [MeasureAudioRMS3]) 
+; ╔═╗  ╦ ╦  ╔╦╗  ╦  ╔═╗  ╦    ╔═╗  ╦  ╦  ╔═╗  ╦  
+; ╠═╣  ║ ║   ║║  ║  ║ ║  ║    ║╣   ╚╗╔╝  ║╣   ║  
+; ╩ ╩  ╚═╝  ═╩╝  ╩  ╚═╝  ╩═╝  ╚═╝   ╚╝   ╚═╝  ╩═╝
+
+Accuracy=5
+FreqMin=20
+FreqMax=16000
+Sensitivity=25
+FFTAttack=0
+FFTDecay=0
+
+; Change this to 48000 if AudioLevel reports errors that say "FFT must be a multiple of 2" or something similar.
+SamplingRateOverride=\1
+; The real fix is to set your audio devices sample rate to 48k / 96k from windows audio settings but if that's not possible, use this.
