@@ -5,15 +5,20 @@
 
 OverlayScale=1.4
 
-Scale=1
+Scale=1.2
+
+Bounce=1
 MaxBounce=0.5
 BounceTreshold=0.2
 
-Jitter=1
+Jitter=0
 MaxJitter=35
 
-RingJitter=1
-MaxRingJitter=20
+RingJitter=0
+MaxRingJitter=35
+
+JitterSpeed=2
+JitterDirectionSpeed=2
 
 ; ╔═╗  ╔═╗  ╦    ╔═╗  ╦═╗  ╔═╗
 ; ║    ║ ║  ║    ║ ║  ╠╦╝  ╚═╗
