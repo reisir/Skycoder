@@ -24,9 +24,9 @@ ContextAction8=
 ContextTitle9=#__ToggleBounce#
 ContextAction9=[!SetVariable Bounce "([#Bounce] = 1 ? 0 : 1)"][!WriteKeyValue Variables Bounce [#Bounce] "#@#settings.inc"][!Refresh]
 ContextTitle10=#__ToggleJitter#
-ContextAction10=[!SetVariable Jitter "([#EnableJitter] = 1 ? 0 : 1)"][!WriteKeyValue Variables Jitter [#EnableJitter] "#@#settings.inc"][!Refresh]
+ContextAction10=[!SetVariable EnableJitter "([#EnableJitter] = 1 ? 0 : 1)"][!WriteKeyValue Variables EnableJitter [#EnableJitter] "#@#settings.inc"][!Refresh]
 ContextTitle11=#__ToggleRingJitter#
-ContextAction11=[!SetVariable RingJitter "([#EnableRingJitter] = 1 ? 0 : 1)"][!WriteKeyValue Variables RingJitter [#EnableRingJitter] "#@#settings.inc"][!Refresh]
+ContextAction11=[!SetVariable EnableRingJitter "([#EnableRingJitter] = 1 ? 0 : 1)"][!WriteKeyValue Variables EnableRingJitter [#EnableRingJitter] "#@#settings.inc"][!Refresh]
 ContextTitle12=-
 ContextAction12=
 ContextTitle13=#__SkinMenu#

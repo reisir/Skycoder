@@ -3,9 +3,7 @@
 ; ╚═╗  ║╣    ║    ║   ║  ║║║  ║ ╦  ╚═╗
 ; ╚═╝  ╚═╝   ╩    ╩   ╩  ╝╚╝  ╚═╝  ╚═╝
 
-OverlayScale=1.4
-
-Scale=0.9
+Scale=1
 
 Bounce=1
 MaxBounce=0.5
