@@ -2,7 +2,11 @@
 
 Skycoder resurrected. With a bunch of new features! 
 
-:skull:
+[Preview video](https://cdn.discordapp.com/attachments/384751038374084638/1132127650048118854/skycoder.mp4)
+
+# TODO
+
+- [ ] Make the preview gif or video under 10mb cause GitHub 
 
 # Credits
 
