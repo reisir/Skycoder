@@ -15,16 +15,22 @@ ContextTitle4=#__CenterVertical#
 ContextAction4=[!SetWindowPosition "([#CURRENTCONFIGX] + ([#CURRENTCONFIGWIDTH] / 2))" "50%" "50%" "50%"]
 ContextTitle5=-
 ContextAction5=
-ContextTitle6=#__ToggleBounce#
-ContextAction6=[!SetVariable Bounce "([#Bounce] = 1 ? 0 : 1)"][!WriteKeyValue Variables Bounce [#Bounce] "#@#settings.inc"][!Refresh]
-ContextTitle7=#__ToggleJitter#
-ContextAction7=[!SetVariable Jitter "([#Jitter] = 1 ? 0 : 1)"][!WriteKeyValue Variables Jitter [#Jitter] "#@#settings.inc"][!Refresh]
-ContextTitle8=#__ToggleRingJitter#
-ContextAction8=[!SetVariable RingJitter "([#RingJitter] = 1 ? 0 : 1)"][!WriteKeyValue Variables RingJitter [#RingJitter] "#@#settings.inc"][!Refresh]
-ContextTitle9=-
-ContextAction9=
-ContextTitle10=#__Refresh#
-ContextAction10=[!RefreshGroup Skycoder]
+ContextTitle6=#__EditVariables#
+ContextAction6=["#CONFIGEDITOR#" "#@#Variables.inc"]
+ContextTitle7=#__Refresh#
+ContextAction7=[!RefreshGroup Skycoder]
+ContextTitle8=-
+ContextAction8=
+ContextTitle9=#__ToggleBounce#
+ContextAction9=[!SetVariable Bounce "([#Bounce] = 1 ? 0 : 1)"][!WriteKeyValue Variables Bounce [#Bounce] "#@#settings.inc"][!Refresh]
+ContextTitle10=#__ToggleJitter#
+ContextAction10=[!SetVariable Jitter "([#EnableJitter] = 1 ? 0 : 1)"][!WriteKeyValue Variables Jitter [#EnableJitter] "#@#settings.inc"][!Refresh]
+ContextTitle11=#__ToggleRingJitter#
+ContextAction11=[!SetVariable RingJitter "([#EnableRingJitter] = 1 ? 0 : 1)"][!WriteKeyValue Variables RingJitter [#EnableRingJitter] "#@#settings.inc"][!Refresh]
+ContextTitle12=-
+ContextAction12=
+ContextTitle13=#__SkinMenu#
+ContextAction13=[!SkinMenu]
 
 RightMouseUpAction=[!SkinCustomMenu]
 Group=Skycoder

@@ -5,19 +5,26 @@
 
 OverlayScale=1.4
 
-Scale=1.2
+Scale=0.9
 
 Bounce=1
 MaxBounce=0.5
 BounceTreshold=0.2
 
-Jitter=0
-MaxJitter=35
+EnableJitter=0
+EnableRingJitter=1
 
-RingJitter=0
-MaxRingJitter=35
+MaxJitter0=90
+MaxJitter1=60
+MaxJitter2=40
+MaxJitter3=30
+MaxJitter4=20
+MaxJitter5=10
 
-JitterSpeed=2
+; Higher number => slower updates
+; Controls the main jitter speed
+JitterSpeed=1
+; Controls the speed of the jitter direction changes
 JitterDirectionSpeed=2
 
 ; ╔═╗  ╔═╗  ╦    ╔═╗  ╦═╗  ╔═╗
@@ -65,7 +72,7 @@ RotationDirection2=1
 Accuracy=5
 FreqMin=20
 FreqMax=16000
-Sensitivity=25
+Sensitivity=15
 FFTAttack=0
 FFTDecay=0
 
