@@ -3,16 +3,23 @@
 ; ╚═╗  ║╣    ║    ║   ║  ║║║  ║ ╦  ╚═╗
 ; ╚═╝  ╚═╝   ╩    ╩   ╩  ╝╚╝  ╚═╝  ╚═╝
 
-Scale=1.8
+Scale=1
 
 Bounce=1
 MaxBounce=0.5
 BounceTreshold=0.2
 
+;  ╦  ╦  ╔╦╗  ╔╦╗  ╔═╗  ╦═╗
+;  ║  ║   ║    ║   ║╣   ╠╦╝
+; ╚╝  ╩   ╩    ╩   ╚═╝  ╩╚═
+
 EnableJitter=0
 EnableRingJitter=1
 
+; Maximum jitter
 MaxJitter0=90
+
+; Maximum ring jitters
 MaxJitter1=60
 MaxJitter2=40
 MaxJitter3=30
@@ -29,17 +36,29 @@ JitterDirectionSpeed=2
 ; ║    ║ ║  ║    ║ ║  ╠╦╝  ╚═╗
 ; ╚═╝  ╚═╝  ╩═╝  ╚═╝  ╩╚═  ╚═╝
 
-; Default RGB color
-DefaultRED=255
-DefaultGREEN=255
-DefaultBLUE=255
-DefaultALPHA=255
+; Default colors
+StandbyColor=255,255,255,255
+ActiveColor=255,0,255,0
 
-; RGB color to transform into
-RED=255
-GREEN=0
-BLUE=255
-ALPHA=0
+; Skull color override
+StandbyColor1=#StandbyColor#
+ActiveColor1=#ActiveColor#
+
+; Inner ring color override
+StandbyColor2=#StandbyColor#
+ActiveColor2=#ActiveColor#
+
+; Solid ring color override
+StandbyColor3=#StandbyColor#
+ActiveColor3=#ActiveColor#
+
+; "Middle" ring color override
+StandbyColor4=#StandbyColor#
+ActiveColor4=#ActiveColor#
+
+; Outer ring color override
+StandbyColor5=#StandbyColor#
+ActiveColor5=#ActiveColor#
 
 ; ╦═╗  ╔═╗  ╔╦╗  ╔═╗  ╔╦╗  ╦  ╔═╗  ╔╗╔
 ; ╠╦╝  ║ ║   ║   ╠═╣   ║   ║  ║ ║  ║║║
@@ -47,13 +66,14 @@ ALPHA=0
 
 ; Intensity is how much sound affects the rotation
 ; Sustain is the base speed of the rotation
+; Direction is 1 for clockwise, -1 counter clockwise
 
 ; Inner ring
 RotateIntensity=6
 RotateSustain=1200
 RotationDirection=1
 
-; Middle ring
+; "Middle" ring
 RotateIntensity1=10
 RotateSustain1=1600
 RotationDirection1=-1
