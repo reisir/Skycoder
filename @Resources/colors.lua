@@ -64,6 +64,6 @@ function Update()
     for i = 1, 6, 1 do
         SKIN:Bang('!SetVariable', 'Color' .. i, calculateColor(i))
     end
-    -- SKIN:Bang('!UpdateMeterGroup', 'Vis')
-    -- SKIN:Bang('!Redraw')
+    SKIN:Bang('!UpdateMeterGroup', 'Vis')
+    SKIN:Bang('!Redraw')
 end

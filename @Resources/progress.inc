@@ -1,3 +1,13 @@
+[Variables]
+; Arc style
+StrokeWidth=(18*[&Scale])
+
+; Arc settings. Angles in degrees. Toggles as 0 | 1
+StartAngle=180
+RotationAngle=360
+ClockWise=1
+Spin=1
+
 ; Source measure. Should have MinValue / MaxValue set if not automatically provided by the measure
 [MeasureProgress]
 Measure=Plugin
@@ -26,15 +36,12 @@ Measure=Calc
 Formula=[MeasureRotate4:%] / 100
 DynamicVariables=1
 
-; The radiuses can be made dynamic if you want to animate the size of the ellipse
 [RX]
 Measure=Calc
-Formula=#Width# / 2
-DynamicVariables=1
+Formula=268 * Scale / 2
 [RY]
 Measure=Calc
-Formula=#Height# / 2
-DynamicVariables=1
+Formula=268 * Scale / 2
 
 ; Get the direction multiplier
 [Direction]
