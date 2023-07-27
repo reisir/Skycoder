@@ -38,7 +38,7 @@ JitterDirectionSpeed=2
 
 ; Default colors
 StandbyColor=255,255,255,255
-ActiveColor=255,0,255,255
+ActiveColor=255,0,255,0
 
 ; Skull color override
 StandbyColor1=#StandbyColor#
@@ -52,8 +52,8 @@ ActiveColor2=#ActiveColor#
 StandbyColor3=#StandbyColor#
 ActiveColor3=#ActiveColor#
 ; Progress bar color override
-StandbyColor4=#ActiveColor3#
-ActiveColor4=#StandbyColor3#
+StandbyColor4=#StandbyColor#
+ActiveColor4=255,0,255,150
 
 ; "Middle" ring color override
 StandbyColor5=#StandbyColor#
@@ -72,19 +72,24 @@ ActiveColor6=#ActiveColor#
 ; Direction is 1 for clockwise, -1 counter clockwise
 
 ; Inner ring
-RotateIntensity=6
-RotateSustain=1200
-RotationDirection=1
+RotateIntensity2=6
+RotateSustain2=500
+RotationDirection2=1
+
+; Progress ring
+RotateIntensity4=12
+RotateSustain4=1000
+RotationDirection4=-1
 
 ; "Middle" ring
-RotateIntensity1=10
-RotateSustain1=1600
-RotationDirection1=-1
+RotateIntensity5=9
+RotateSustain5=3200
+RotationDirection5=-1
 
 ; Outer ring
-RotateIntensity2=8
-RotateSustain2=1400
-RotationDirection2=1
+RotateIntensity6=8
+RotateSustain6=2000
+RotationDirection6=1
 
 ; ╔═╗  ╦ ╦  ╔╦╗  ╦  ╔═╗  ╦    ╔═╗  ╦  ╦  ╔═╗  ╦  
 ; ╠═╣  ║ ║   ║║  ║  ║ ║  ║    ║╣   ╚╗╔╝  ║╣   ║  

@@ -3,7 +3,7 @@ function trim(s)
 end
 
 function split(color)
-    sep = ","
+    local sep = ","
     local t = {}
     for str in string.gmatch(color, "([^" .. sep .. "]+)") do
         table.insert(t, str)
@@ -13,18 +13,20 @@ end
 
 standby = {}
 active = {}
+bands = {}
 
 function Initialize()
     for i = 1, 6, 1 do
-        color = SKIN:GetVariable('StandbyColor' .. i)
-        table.insert(standby, sanitizeColor(color))
-        color = SKIN:GetVariable('ActiveColor' .. i)
-        table.insert(active, sanitizeColor(color))
+        local standbyColor = SKIN:GetVariable('StandbyColor' .. i)
+        table.insert(standby, sanitizeColor(standbyColor))
+        local activeColor = SKIN:GetVariable('ActiveColor' .. i)
+        table.insert(active, sanitizeColor(activeColor))
+        table.insert(bands, SKIN:GetMeasure('MeasureBand' .. i))
     end
 end
 
-function sanitizeColor(color)
-    color = split(color)
+function sanitizeColor(string)
+    local color = split(string)
     if color[4] == nil then
         color[4] = '' .. 255
     end
@@ -36,26 +38,23 @@ function sanitizeColor(color)
     return color
 end
 
-function component(i, s, a)
-    MeasureBand = SKIN:GetMeasure('MeasureBand' .. i)
-    band = MeasureBand:GetValue()
-    color = (s - (s - a) * band)
-
-    comma = ','
+function component(i, band, s, a)
+    local color = math.floor(s - ((s - a) * band))
+    local comma = ','
     if i == 4 then
         comma = ''
     end
-
-    return color .. comma    
+    return color .. comma
 end
 
 function calculateColor(n)
-    s = standby[n]
-    a = active[n]
+    local s = standby[n]
+    local a = active[n]
+    local band = bands[n]:GetRelativeValue()
 
-    color = ''
+    local color = ''
     for i = 1, 4, 1 do
-        color = color .. component(i, s[i], a[i])
+        color = color .. component(i, band, s[i], a[i])
     end
 
     return color
@@ -63,7 +62,8 @@ end
 
 function Update()
     for i = 1, 6, 1 do
-        color = calculateColor(i)
-        SKIN:Bang('!SetVariable', 'Color' .. i, color)
+        SKIN:Bang('!SetVariable', 'Color' .. i, calculateColor(i))
     end
+    -- SKIN:Bang('!UpdateMeterGroup', 'Vis')
+    -- SKIN:Bang('!Redraw')
 end

@@ -23,7 +23,8 @@ Formula=(decimal * #RotationAngle# / 360)
 ; Offset the "cycle" of the arc. Basically rotates it along the ellipse.
 [arcoffset]
 Measure=Calc
-Formula=(#Spin# = 1) ? decimal : 0
+Formula=[MeasureRotate4:%] / 100
+DynamicVariables=1
 
 ; The radiuses can be made dynamic if you want to animate the size of the ellipse
 [RX]
@@ -38,7 +39,7 @@ DynamicVariables=1
 ; Get the direction multiplier
 [Direction]
 Measure=Calc
-Formula=#ClockWise# = 1 ? -1 : 1
+Formula=0 - #RotationDirection4#
 UpdateDivider=-1
 
 ; Arc cordinates
@@ -58,7 +59,7 @@ Formula=RY + RY * Cos((end + arcoffset) * Pi * 2 * Direction + Rad(#StartAngle#)
 ; Arc shape options
 [SweepDirection]
 Measure=Calc
-Formula=#ClockWise# = 1 ? 0 : 1
+Formula=#RotationDirection4# = 1 ? 0 : 1
 UpdateDivider=-1
 [ArcSize]
 Measure=Calc
