@@ -1,15 +1,34 @@
-[Shape]
+[Variables]
+; Arc size
+Width=(268*[&Scale])
+Height=(268*[&Scale])
+
+; Arc style
+StrokeWidth=(18*[&Scale])
+
+; Arc settings. Angles in degrees. Toggles as 0 | 1
+StartAngle=180
+RotationAngle=360
+ClockWise=1
+Spin=1
+
+[IncludeProgress]
+@IncludeProgress=#@#progress.inc
+
+[Rings]
 Meter=Shape
 Group=Vis
 X=([&Offset] + [&JitterX0])
 Y=([&Offset] + [&JitterY0])
 Shape=Ellipse  (194 * [&Scale] + ([#EnableRingJitter] = 1 ? [&JitterX2] : 0)),(194 * [&Scale] + ([#EnableRingJitter] = 1 ? [&JitterY2] : 0)),(110*[&Scale]) | Fill Color 0,0,0,0 | Stroke Color (#r2# - (#r2# - #_r2#) * [MeasureBand2]),(#g2# - (#g2# - #_g2#) * [MeasureBand2]),(#b2# - (#b2# - #_b2#) * [MeasureBand2]),(#a2# - (#a2# - #_a2#) * [MeasureBand2]) | StrokeWidth (18*[&Scale]) | StrokeDashes (220*PI/81),(440*PI/1323),(3520*PI/3969),(440*PI/1323),(220*PI/147),(440*PI/1323),(4730*PI/3969),(440*PI/1323),(220*PI/147),(440*PI/1323),(7150*PI/3969),(550*PI/567) | Rotate (#RotationDirection# * [MeasureRotate:%]*3.6)
 Shape2=Ellipse (194 * [&Scale] + ([#EnableRingJitter] = 1 ? [&JitterX3] : 0)),(194 * [&Scale] + ([#EnableRingJitter] = 1 ? [&JitterY3] : 0)),(134*[&Scale]) | Fill Color 0,0,0,0 | Stroke Color (#r3# - (#r3# - #_r3#) * [MeasureBand3]),(#g3# - (#g3# - #_g3#) * [MeasureBand3]),(#b3# - (#b3# - #_b3#) * [MeasureBand3]),(#a3# - (#a3# - #_a3#) * [MeasureBand3]) | StrokeWidth (18*[&Scale])
-Shape3=Ellipse (194 * [&Scale] + ([#EnableRingJitter] = 1 ? [&JitterX4] : 0)),(194 * [&Scale] + ([#EnableRingJitter] = 1 ? [&JitterY4] : 0)),(158*[&Scale]) | Fill Color 0,0,0,0 | Stroke Color (#r4# - (#r4# - #_r4#) * [MeasureBand4]),(#g4# - (#g4# - #_g4#) * [MeasureBand4]),(#b4# - (#b4# - #_b4#) * [MeasureBand4]),(#a4# - (#a4# - #_a4#) * [MeasureBand4]) | StrokeWidth (18*[&Scale]) | StrokeDashes (1580*PI/3969),(632*PI/1323),(158*PI/189),(632*PI/1323),(6794*PI/3969),(790*PI/441),(4582*PI/1323),(3634*PI/3969),(5056*PI/3969),(632*PI/1323),(6794*PI/3969),(632*PI/1323),(158*PI/189),(632*PI/1323),(1580*PI/3969),(632*PI/1323),(1580*PI/3969),(1264*PI/1323) | Rotate (#RotationDirection1# * [MeasureRotate1:%]*3.6)
-Shape4=Ellipse (194 * [&Scale] + ([#EnableRingJitter] = 1 ? [&JitterX5] : 0)),(194 * [&Scale] + ([#EnableRingJitter] = 1 ? [&JitterY5] : 0)),(184*[&Scale]) | Fill Color 0,0,0,0 | Stroke Color (#r5# - (#r5# - #_r5#) * [MeasureBand5]),(#g5# - (#g5# - #_g5#) * [MeasureBand5]),(#b5# - (#b5# - #_b5#) * [MeasureBand5]),(#a5# - (#a5# - #_a5#) * [MeasureBand5]) | StrokeWidth (20*[&Scale]) | StrokeDashes (184*PI/441),(92*PI/2205),(184*PI/441),(92*PI/2205),(184*PI/441),(92*PI/2205),(184*PI/441),(92*PI/2205),(184*PI/441),(368*PI/735),(184*PI/441),(368*PI/735),(184*PI/441),(368*PI/735),(184*PI/441),(92*PI/2205),(184*PI/441),(368*PI/735),(184*PI/441),(92*PI/2205),(184*PI/441),(92*PI/2205),(184*PI/441),(92*PI/2205),(184*PI/441),(368*PI/735),(184*PI/441),(92*PI/2205),(184*PI/441),(368*PI/735),(184*PI/441),(92*PI/2205),(184*PI/441),(92*PI/2205),(184*PI/441),(92*PI/2205),(184*PI/441),(368*PI/735),(184*PI/441),(3128*PI/2205),(184*PI/441),(92*PI/2205),(184*PI/441),(92*PI/2205),(184*PI/441),(92*PI/2205),(184*PI/441),(368*PI/735),(184*PI/441),(92*PI/2205),(184*PI/441),(92*PI/2205),(184*PI/441),(736*PI/735) | Rotate (#RotationDirection2# * [MeasureRotate2:%]*3.6)
+Shape3=Arc ([X1]),  ([Y1]), ([X2]), ([Y2]),([RX]),([RY]),*,[SweepDirection],[ArcSize] | Extend Stroke | Offset ((60 * [&Scale]) + ([#EnableRingJitter] = 1 ? [&JitterX3] : 0)),((60 * [&Scale]) + ([#EnableRingJitter] = 1 ? [&JitterY3] : 0))
+Stroke=StrokeWidth #StrokeWidth# | StrokeEndCap Round | StrokeStartCap Round | Stroke Color (#_r3# - (#_r3# - #r3#) * [MeasureBand3]),(#_g3# - (#_g3# - #g3#) * [MeasureBand3]),(#_b3# - (#_b3# - #b3#) * [MeasureBand3]),(#_a3# - (#_a3# - #a3#) * [MeasureBand3])
+Shape4=Ellipse (194 * [&Scale] + ([#EnableRingJitter] = 1 ? [&JitterX4] : 0)),(194 * [&Scale] + ([#EnableRingJitter] = 1 ? [&JitterY4] : 0)),(158*[&Scale]) | Fill Color 0,0,0,0 | Stroke Color (#r4# - (#r4# - #_r4#) * [MeasureBand4]),(#g4# - (#g4# - #_g4#) * [MeasureBand4]),(#b4# - (#b4# - #_b4#) * [MeasureBand4]),(#a4# - (#a4# - #_a4#) * [MeasureBand4]) | StrokeWidth (18*[&Scale]) | StrokeDashes (1580*PI/3969),(632*PI/1323),(158*PI/189),(632*PI/1323),(6794*PI/3969),(790*PI/441),(4582*PI/1323),(3634*PI/3969),(5056*PI/3969),(632*PI/1323),(6794*PI/3969),(632*PI/1323),(158*PI/189),(632*PI/1323),(1580*PI/3969),(632*PI/1323),(1580*PI/3969),(1264*PI/1323) | Rotate (#RotationDirection1# * [MeasureRotate1:%]*3.6)
+Shape5=Ellipse (194 * [&Scale] + ([#EnableRingJitter] = 1 ? [&JitterX5] : 0)),(194 * [&Scale] + ([#EnableRingJitter] = 1 ? [&JitterY5] : 0)),(184*[&Scale]) | Fill Color 0,0,0,0 | Stroke Color (#r5# - (#r5# - #_r5#) * [MeasureBand5]),(#g5# - (#g5# - #_g5#) * [MeasureBand5]),(#b5# - (#b5# - #_b5#) * [MeasureBand5]),(#a5# - (#a5# - #_a5#) * [MeasureBand5]) | StrokeWidth (20*[&Scale]) | StrokeDashes (184*PI/441),(92*PI/2205),(184*PI/441),(92*PI/2205),(184*PI/441),(92*PI/2205),(184*PI/441),(92*PI/2205),(184*PI/441),(368*PI/735),(184*PI/441),(368*PI/735),(184*PI/441),(368*PI/735),(184*PI/441),(92*PI/2205),(184*PI/441),(368*PI/735),(184*PI/441),(92*PI/2205),(184*PI/441),(92*PI/2205),(184*PI/441),(92*PI/2205),(184*PI/441),(368*PI/735),(184*PI/441),(92*PI/2205),(184*PI/441),(368*PI/735),(184*PI/441),(92*PI/2205),(184*PI/441),(92*PI/2205),(184*PI/441),(92*PI/2205),(184*PI/441),(368*PI/735),(184*PI/441),(3128*PI/2205),(184*PI/441),(92*PI/2205),(184*PI/441),(92*PI/2205),(184*PI/441),(92*PI/2205),(184*PI/441),(368*PI/735),(184*PI/441),(92*PI/2205),(184*PI/441),(92*PI/2205),(184*PI/441),(736*PI/735) | Rotate (#RotationDirection2# * [MeasureRotate2:%]*3.6)
 DynamicVariables=1
 
-[overlaySkull]
+[skull]
 Meter=Shape
 Group=Vis
 X=((194 * [&Scale]) + ([#EnableRingJitter] = 1 ? [&JitterX1] : 0))r
