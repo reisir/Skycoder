@@ -5,7 +5,7 @@
 
 Scale=1
 
-Bounce=1
+EnableBounce=1
 MaxBounce=0.5
 BounceTreshold=0.2
 
@@ -38,7 +38,7 @@ JitterDirectionSpeed=2
 
 ; Default colors
 StandbyColor=255,255,255,255
-ActiveColor=255,0,255,0
+ActiveColor=255,0,255,150
 
 ; Skull color override
 StandbyColor1=#StandbyColor#

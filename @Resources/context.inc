@@ -17,12 +17,12 @@ ContextTitle7=#__RefreshGroup#
 ContextAction7=[!RefreshGroup Skycoder]
 ContextTitle8=-
 ContextAction8=
-ContextTitle9=#__ToggleBounce#
-ContextAction9=[!SetVariable "Bounce" "([#Bounce] = 1 ? 0 : 1)"][!WriteKeyValue Variables "Bounce" [#Bounce] "#@#settings.inc"][!Refresh]
-ContextTitle10=#__ToggleJitter#
-ContextAction10=[!SetVariable "Jitter" "([#Jitter] = 1 ? 0 : 1)"][!WriteKeyValue Variables "Jitter" [#Jitter] "#@#settings.inc"][!Refresh]
-ContextTitle11=#__ToggleRingJitter#
-ContextAction11=[!SetVariable "RingJitter" "([#RingJitter] = 1 ? 0 : 1)"][!WriteKeyValue Variables "RingJitter" [#RingJitter] "#@#settings.inc"][!Refresh]
+ContextTitle9=#__ToggleEnableBounce#
+ContextAction9=[!SetVariable "EnableBounce" "([#EnableBounce] = 1 ? 0 : 1)"][!WriteKeyValue Variables "EnableBounce" [#EnableBounce] "#@#settings.inc"][!Refresh]
+ContextTitle10=#__ToggleEnableJitter#
+ContextAction10=[!SetVariable "EnableJitter" "([#EnableJitter] = 1 ? 0 : 1)"][!WriteKeyValue Variables "EnableJitter" [#EnableJitter] "#@#settings.inc"][!Refresh]
+ContextTitle11=#__ToggleEnableRingJitter#
+ContextAction11=[!SetVariable "EnableRingJitter" "([#EnableRingJitter] = 1 ? 0 : 1)"][!WriteKeyValue Variables "EnableRingJitter" [#EnableRingJitter] "#@#settings.inc"][!Refresh]
 ContextTitle12=-
 ContextAction12=
 ContextTitle13=#__SkinMenu#

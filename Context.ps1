@@ -69,9 +69,9 @@ $menu = @(
     $current, $spacer,
     $centerHorizontal, $centerVertical, $spacer,
     $editVariables, $refreshGroup, $spacer,
-    (ToggleVariable Bounce),
-    (ToggleVariable Jitter),
-    (ToggleVariable RingJitter),
+    (ToggleVariable EnableBounce),
+    (ToggleVariable EnableJitter),
+    (ToggleVariable EnableRingJitter),
     $spacer, $skinmenu
 )
 
