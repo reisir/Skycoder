@@ -61,9 +61,16 @@ Measure=Plugin
 Plugin=AudioLevel
 Parent=MeasureAudio
 Type=Band
-Bandidx=5
+Bandidx=4
 
 [MeasureBand5]
+Measure=Plugin
+Plugin=AudioLevel
+Parent=MeasureAudio
+Type=Band
+Bandidx=5
+
+[MeasureBand6]
 Measure=Plugin
 Plugin=AudioLevel
 Parent=MeasureAudio

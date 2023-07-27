@@ -38,7 +38,7 @@ JitterDirectionSpeed=2
 
 ; Default colors
 StandbyColor=255,255,255,255
-ActiveColor=255,0,255,150
+ActiveColor=255,0,255,255
 
 ; Skull color override
 StandbyColor1=#StandbyColor#
@@ -51,14 +51,17 @@ ActiveColor2=#ActiveColor#
 ; Solid ring color override
 StandbyColor3=#StandbyColor#
 ActiveColor3=#ActiveColor#
+; Progress bar color override
+StandbyColor4=#ActiveColor3#
+ActiveColor4=#StandbyColor3#
 
 ; "Middle" ring color override
-StandbyColor4=#StandbyColor#
-ActiveColor4=#ActiveColor#
-
-; Outer ring color override
 StandbyColor5=#StandbyColor#
 ActiveColor5=#ActiveColor#
+
+; Outer ring color override
+StandbyColor6=#StandbyColor#
+ActiveColor6=#ActiveColor#
 
 ; ╦═╗  ╔═╗  ╔╦╗  ╔═╗  ╔╦╗  ╦  ╔═╗  ╔╗╔
 ; ╠╦╝  ║ ║   ║   ╠═╣   ║   ║  ║ ║  ║║║
