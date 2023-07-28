@@ -14,7 +14,7 @@ BounceTreshold=0.2
 ; ╚╝  ╩   ╩    ╩   ╚═╝  ╩╚═
 
 EnableJitter=0
-EnableRingJitter=0
+EnableRingJitter=1
 
 ; Maximum jitter
 MaxJitter0=90
@@ -22,7 +22,7 @@ MaxJitter0=90
 ; Maximum ring jitters
 MaxJitter1=60
 MaxJitter2=40
-MaxJitter3=0
+MaxJitter3=30
 MaxJitter4=20
 MaxJitter5=10
 
@@ -30,7 +30,7 @@ MaxJitter5=10
 ; Controls the main jitter speed
 JitterSpeed=1
 ; Controls the speed of the jitter direction changes
-JitterDirectionSpeed=2
+JitterDirectionSpeed=3
 
 ; ╔═╗  ╔═╗  ╦    ╔═╗  ╦═╗  ╔═╗
 ; ║    ║ ║  ║    ║ ║  ╠╦╝  ╚═╗
@@ -52,8 +52,8 @@ ActiveColor2=#ActiveColor#
 StandbyColor3=#StandbyColor#
 ActiveColor3=#ActiveColor#
 ; Progress bar color override
-StandbyColor4=255,0,255,150
-ActiveColor4=#StandbyColor#
+StandbyColor4=#StandbyColor#
+ActiveColor4=#ActiveColor#
 
 ; "Middle" ring color override
 StandbyColor5=#StandbyColor#
