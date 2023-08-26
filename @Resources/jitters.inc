@@ -9,7 +9,7 @@
 [JitterX0]
 Formula=(((#EnableJitter# = 1) ? (JXR0 * MeasureBand0 * Random) : 0) + ([#EnableRingJitter] = 1 ? ([&MaxJitter] / 2) : 0))
 [JitterY0]
-Formula=(((#EnableJitter# = 1) ? (JXR0 * MeasureBand0 * Random) : 0) + ([#EnableRingJitter] = 1 ? ([&MaxJitter] / 2) : 0))
+Formula=(((#EnableJitter# = 1) ? (JYR0 * MeasureBand0 * Random) : 0) + ([#EnableRingJitter] = 1 ? ([&MaxJitter] / 2) : 0))
 
 [JXRFactory]
 Measure=Script
