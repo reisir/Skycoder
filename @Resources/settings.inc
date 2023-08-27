@@ -13,11 +13,11 @@ BounceTreshold=0.2
 ;  ║  ║   ║    ║   ║╣   ╠╦╝
 ; ╚╝  ╩   ╩    ╩   ╚═╝  ╩╚═
 
-EnableJitter=0
+EnableJitter=1
 EnableRingJitter=1
 
 ; Maximum jitter
-MaxJitter0=90
+MaxJitter0=45
 
 ; Maximum ring jitters
 MaxJitter1=60
@@ -52,8 +52,8 @@ ActiveColor2=#ActiveColor#
 StandbyColor3=#StandbyColor#
 ActiveColor3=#ActiveColor#
 ; Progress bar color override
-StandbyColor4=#StandbyColor#
-ActiveColor4=#ActiveColor#
+StandbyColor4=#ActiveColor3#
+ActiveColor4=#StandbyColor3#
 
 ; "Middle" ring color override
 StandbyColor5=#StandbyColor#
