@@ -1,3 +1,4 @@
+[MonD]
 Author=Reisir
 Version=v1.2.0
 VariableFiles=#@#settings.inc
