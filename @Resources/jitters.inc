@@ -13,37 +13,33 @@ sw=9
 
 [edge]
 Measure=Calc
-Formula=(#o# + #r5# + #sw#) * Scale
+Formula=(#o# + #r5# + #sw#) * #Scale#
 UpdateDivider=-1
 
-[mj0]
-Measure=Calc
-Formula=edge + #MaxJitter0#
-UpdateDivider=-1
 [mj1]
 Measure=Calc
-Formula=((#o# + #r1#) * Scale) + [#MaxJitter1]
+Formula=#r1# - #r5# + [#MaxJitter1]
 UpdateDivider=-1
 [mj2]
 Measure=Calc
-Formula=((#o# + #r2# + #sw#) * Scale) + [#MaxJitter1]
+Formula=#r2# - #r5# + [#MaxJitter2]
 UpdateDivider=-1
 [mj3]
 Measure=Calc
-Formula=((#o# + #r3# + #sw#) * Scale) + [#MaxJitter1]
+Formula=#r3# - #r5# + [#MaxJitter3]
 UpdateDivider=-1
 [mj4]
 Measure=Calc
-Formula=((#o# + #r4# + #sw#) * Scale) + [#MaxJitter1]
+Formula=#r4# - #r5# + [#MaxJitter4]
 UpdateDivider=-1
 [mj5]
 Measure=Calc
-Formula=((#o# + #r5# + #sw#) * Scale) + [#MaxJitter1]
+Formula=#r5# - #r5# + [#MaxJitter5]
 UpdateDivider=-1
 
 [MaxJitter]
 Measure=Calc
-Formula=((Max(Max(Max(Max(Max(mj0,mj1),mj2),mj3),mj4),mj5) - edge) / 2)
+Formula=(Max(Max(Max(Max(mj1,mj2),mj3),mj4),mj5))
 UpdateDivider=-1
 
 [JitterRandoms]
@@ -55,9 +51,9 @@ UpdateDivider=-1
 @IncludeJitterY=#@#Jitters\YJitters.inc
 
 [JitterX0]
-Formula=(((#EnableJitter# = 1) ? (JXR0 * MeasureBand0 * Random) : 0) + ([#EnableRingJitter] = 1 ? ([&MaxJitter] / 2) : 0))
+Formula=((#EnableJitter# = 1) ? (JXR0 * MeasureBand0 * Random) : 0)
 [JitterY0]
-Formula=(((#EnableJitter# = 1) ? (JYR0 * MeasureBand0 * Random) : 0) + ([#EnableRingJitter] = 1 ? ([&MaxJitter] / 2) : 0))
+Formula=((#EnableJitter# = 1) ? (JYR0 * MeasureBand0 * Random) : 0)
 
 [JXRFactory]
 Measure=Script
