@@ -11,9 +11,9 @@ r1=95
 ; half of strokewidth
 sw=9
 
-[edge]
+[OuterEdge]
 Measure=Calc
-Formula=(#o# + #r5# + #sw#) * #Scale#
+Formula=(#o# + #r5# + #sw#)
 UpdateDivider=-1
 
 [mj1]
