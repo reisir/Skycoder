@@ -13,14 +13,14 @@ BounceTreshold=0.2
 ;  ║  ║   ║    ║   ║╣   ╠╦╝
 ; ╚╝  ╩   ╩    ╩   ╚═╝  ╩╚═
 
-EnableJitter=1
+EnableJitter=0
 EnableRingJitter=1
 
 ; Maximum jitter
 MaxJitter0=45
 
 ; Maximum ring jitters
-MaxJitter1=60
+MaxJitter1=90
 MaxJitter2=40
 MaxJitter3=30
 MaxJitter4=20
