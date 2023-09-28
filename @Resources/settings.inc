@@ -9,6 +9,10 @@ EnableBounce=1
 MaxBounce=0.5
 BounceTreshold=0.2
 
+; None | Blur | Acrylic
+; Acrylic might lag when moving
+FrostType=None
+
 ;  ╦  ╦  ╔╦╗  ╔╦╗  ╔═╗  ╦═╗
 ;  ║  ║   ║    ║   ║╣   ╠╦╝
 ; ╚╝  ╩   ╩    ╩   ╚═╝  ╩╚═
