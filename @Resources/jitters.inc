@@ -51,9 +51,9 @@ UpdateDivider=-1
 @IncludeJitterY=#@#Jitters\YJitters.inc
 
 [JitterX0]
-Formula=((#EnableJitter# = 1) ? (JXR0 * MeasureBand0 * Random) : 0)
+Disabled=(1 - #EnableJitter#)
 [JitterY0]
-Formula=((#EnableJitter# = 1) ? (JYR0 * MeasureBand0 * Random) : 0)
+Disabled=(1 - #EnableJitter#)
 
 [JXRFactory]
 Measure=Script
@@ -98,7 +98,7 @@ SectionName=JitterX%%
 Option0=Measure
 Value0=Calc
 Option1=Formula
-Value1="((JXR%% * MeasureBand%% * Random))"
+Value1="((JXR%% * MeasureBand%% * Random) * #*Scale*#)"
 Option2=HighBound
 Value2=#*MaxJitter%%*#
 Option3=UpdateRandom
@@ -115,7 +115,7 @@ SectionName=JitterY%%
 Option0=Measure
 Value0=Calc
 Option1=Formula
-Value1="((JYR%% * MeasureBand%% * Random))"
+Value1="((JYR%% * MeasureBand%% * Random) * #*Scale*#)"
 Option2=HighBound
 Value2=#*MaxJitter%%*#
 Option3=UpdateRandom
