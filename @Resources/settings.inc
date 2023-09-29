@@ -17,7 +17,7 @@ FrostType=Acrylic
 ; Acrylic might lag when moving the skin around
 
 ; Extra padding around the visualizer, in pixels
-Padding=100
+Padding=50
 
 ;  ╦  ╦  ╔╦╗  ╔╦╗  ╔═╗  ╦═╗
 ;  ║  ║   ║    ║   ║╣   ╠╦╝
@@ -117,5 +117,5 @@ SamplingRateOverride=\1
 ; Feature toggles
 ; These can all be toggled through the right click menu
 EnableBounce=1
-EnableJitter=1
+EnableJitter=0
 EnableRingJitter=1
