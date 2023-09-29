@@ -42,6 +42,13 @@ Measure=Calc
 Formula=(Max(Max(Max(Max(mj1,mj2),mj3),mj4),mj5))
 UpdateDivider=-1
 
+[JitterPadding]
+Measure=Calc
+Formula=(#MaxJitter0# + MaxJitter) * #Scale#
+UpdateDivider=-1
+DynamicVariables=1
+Group=Scale
+
 [JitterRandoms]
 @IncludeJXR=#@#Jitters\JXR.inc
 @IncludeJYR=#@#Jitters\JYR.inc
@@ -105,6 +112,10 @@ Option3=UpdateRandom
 Value3=1
 Option4=UpdateDivider
 Value4=#*JitterSpeed*#
+Option5=DynamicVariables
+Value5=1
+Option6=Group
+Value6=Scale
 
 [JitterFactoryY]
 Measure=Script
@@ -122,3 +133,7 @@ Option3=UpdateRandom
 Value3=1
 Option4=UpdateDivider
 Value4=#*JitterSpeed*#
+Option5=DynamicVariables
+Value5=1
+Option6=Group
+Value6=Scale

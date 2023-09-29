@@ -3,28 +3,29 @@
 ; ╚═╗  ║╣    ║    ║   ║  ║║║  ║ ╦  ╚═╗
 ; ╚═╝  ╚═╝   ╩    ╩   ╩  ╝╚╝  ╚═╝  ╚═╝
 
+; The default size of the visualizer.
 Scale=1
 
-EnableBounce=1
+; MaxBounce=0.5 means the maximum size is 50% bigger than the default size
 MaxBounce=0.5
+; The treshold that the bass level must pass to activate bounce. Lower means quieter
 BounceTreshold=0.2
 
+; Controls the background type, Blur and Acrylic use the FrostedGlass plugin
 ; None | Blur | Acrylic
-; Acrylic might lag when moving
-FrostType=None
+FrostType=Acrylic
+; Acrylic might lag when moving the skin around
 
 ;  ╦  ╦  ╔╦╗  ╔╦╗  ╔═╗  ╦═╗
 ;  ║  ║   ║    ║   ║╣   ╠╦╝
 ; ╚╝  ╩   ╩    ╩   ╚═╝  ╩╚═
 
-EnableJitter=0
-EnableRingJitter=1
-
-; Maximum jitter
+; Maximum jitter (the distance the visualizer can shake) in pixels
 MaxJitter0=45
 
-; Maximum ring jitters
-MaxJitter1=90
+; Maximum ring jitters (the distance each ring can shake)
+; starting from the center
+MaxJitter1=60
 MaxJitter2=40
 MaxJitter3=30
 MaxJitter4=20
@@ -109,3 +110,9 @@ FFTDecay=0
 ; Change this to 48000 if AudioLevel reports errors that say "FFT must be a multiple of 2" or something similar.
 SamplingRateOverride=\1
 ; The real fix is to set your audio devices sample rate to 48k / 96k from windows audio settings but if that's not possible, use this.
+
+; Feature toggles
+; These can all be toggled through the right click menu
+EnableBounce=1
+EnableJitter=0
+EnableRingJitter=1
