@@ -1,5 +1,7 @@
 # Skycoder Redux
 
+![skycoder](https://github.com/reisir/Skycoder/assets/93496808/00b8c883-f468-49de-84d1-e52d24bf867d)
+
 Skycoder resurrected. With a bunch of new features! 
 
 # Features
